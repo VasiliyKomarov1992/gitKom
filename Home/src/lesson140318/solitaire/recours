@@ -1,0 +1,48 @@
+		int y = 80;
+		
+		stackDisplay(g, top()); <-- 185
+		
+			private int stackDisplay(Graphics g, Card aCard) {  --> firstcard
+		int localy; --> 0
+		if (aCard == null) {
+			return y;
+		}
+		localy = stackDisplay(g, aCard.link); <-- 150
+		aCard.draw(g, x, localy);
+		return localy + 35; --> 185
+	}
+
+
+			private int stackDisplay(Graphics g, Card aCard) {  --> secondcard
+		int localy; --> 0
+		if (aCard == null) {
+			return y;
+		}
+		localy = stackDisplay(g, aCard.link);
+		aCard.draw(g, x, localy); <-- 115
+		return localy + 35; --> 150
+	}
+	
+	
+				private int stackDisplay(Graphics g, Card aCard) {  --> thirdcard
+		int localy; --> 0
+		if (aCard == null) {
+			return y;
+		}
+		localy = stackDisplay(g, aCard.link);  <-- вернули 80
+		aCard.draw(g, x, localy);
+		return localy + 35; --> 115
+	}
+	
+		
+		
+					private int stackDisplay(Graphics g, null) {  --> null
+		int localy; --> 0
+		if (null == null) {
+			return y;  --> 80
+		}
+		localy = stackDisplay(g, aCard.link);
+		aCard.draw(g, x, localy);
+		return localy + 35;
+	}
+		
