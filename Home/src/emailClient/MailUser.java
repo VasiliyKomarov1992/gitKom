@@ -19,9 +19,9 @@ public class MailUser {
 	
 	public Message createMessage() {
 		
-		String senderAdress;
-		String receiverAdress;
-		String textMessages;
+		String senderAdress = "";
+		String receiverAdress = "";
+		String textMessages = "";
 		
 		new Thread(new Runnable() {
 			
@@ -37,6 +37,7 @@ public class MailUser {
 			}
 		}).start();
 		Message newMessage = new Message(senderAdress, receiverAdress, textMessages);
+		return newMessage;
 	}
 	
 	public void sendMessage(String text) {
