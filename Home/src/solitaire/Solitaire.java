@@ -1,4 +1,4 @@
-package lesson140318.solitaire;
+package solitaire;
 
 /*
  Simple Solitaire Card Game in Java
@@ -379,7 +379,8 @@ public class Solitaire extends Applet {
 			allPiles[i].display(g);
 		}
 	}
-
+	
+	
 	public boolean mouseDown(Event evt, int x, int y) {
 		for (int i = 0; i < 13; i++) {
 			if (allPiles[i].includes(x, y)) {
@@ -390,4 +391,26 @@ public class Solitaire extends Applet {
 		}
 		return true;
 	}
+}
+
+
+for(TablePile current : tableau) {
+	ArrayList list = new ArrayList();
+	if(current.faceUp()) {
+		list.add(current);
+	}
+}
+
+//for (int i = list.leghts - 1; i > 0; i--) {
+//	if (!list[i].rank() + 1 = list[i-1]) {
+//		for (int j = i-1, j = 0; j--) {
+//			
+//			list.remove(j);
+//		}
+//		list.trimToSize();
+//	}
+//}
+
+for (TablePile currentCard : list) {
+	проверка(карент)
 }

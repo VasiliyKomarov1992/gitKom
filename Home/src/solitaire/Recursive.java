@@ -1,4 +1,4 @@
-package lesson140318.solitaire;
+package solitaire;
 
 public class Recursive {
 
