@@ -1,8 +1,8 @@
-package Task_2;
+package task_2_Stack;
 
 public class Stack<T> {
 
-	int item = 0;
+	int size = 0;
 	Object[] stackArray;
 
 	@SuppressWarnings("unchecked")
@@ -14,14 +14,14 @@ public class Stack<T> {
 		if (isEmpty()) {
 			return null;
 		}
-		return stackArray[item - 1];
+		return stackArray[size - 1];
 	}
 
 	public Object pop() {
 		if (isEmpty()) {
 			return null;
 		}
-		return stackArray[--item];
+		return stackArray[--size];
 	}
 
 
@@ -29,7 +29,7 @@ public class Stack<T> {
 		if (size() == stackArray.length) {
 			throw new StackOverflow();
 		} else {
-			stackArray[item++] = _item;
+			stackArray[size++] = _item;
 		}
 	}
 
@@ -38,20 +38,27 @@ public class Stack<T> {
 	}
 
 	private int size() {
-		return item;
+		return size;
 	}
 
 	public static void main(String[] args) {
 
 		Stack<String> stack = new Stack<>(20);
 		try {
-			stack.push("one");
-			stack.push("two");
-			stack.push("three");
+			stack.push("1");
+			stack.push("2");
+			stack.push("3");
+			stack.push("3");
+			stack.push("4");
+			stack.push("4");
+			stack.push("2");
+
 		} catch (StackOverflow e) {
 			e.printStackTrace();
 		}
 
+		System.out.println("The number of elements in the stack: " + stack.size());
+		System.out.println("- - - - - - ");
 		while (stack.top() != null) {
 			System.out.println(stack.pop());
 		}

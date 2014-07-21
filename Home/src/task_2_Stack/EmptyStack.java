@@ -1,4 +1,4 @@
-package Task_2;
+package task_2_Stack;
 
 public class EmptyStack extends Exception {
 
