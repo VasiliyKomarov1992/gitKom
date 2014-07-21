@@ -5,7 +5,6 @@ public class Stack<T> {
 	int size = 0;
 	Object[] stackArray;
 
-	@SuppressWarnings("unchecked")
 	public Stack(int sizeArray) {
 		stackArray = new Object[sizeArray];
 	}
@@ -25,11 +24,11 @@ public class Stack<T> {
 	}
 
 
-	public void push(Object _item) throws StackOverflow {
+	public void push(Object _size) throws StackOverflow {
 		if (size() == stackArray.length) {
 			throw new StackOverflow();
 		} else {
-			stackArray[size++] = _item;
+			stackArray[size++] = _size;
 		}
 	}
 
