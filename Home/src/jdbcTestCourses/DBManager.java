@@ -10,24 +10,23 @@ import java.sql.Statement;
 public class DBManager {
 	
 	private static DBManager self = new DBManager(); 
+	private Connection conn;
+
+	private DBManager() {
+	}
 	
 	public static Connection connection() {
 		return self.conn;
 	}
 	
-	private Connection conn;
-	
 	{
 		try {
-			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/jdbctest?user=root");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/jdbctest?user=root");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} 
 	}
 	
-	private DBManager() {
-		
-	}
 	
 	public static void main(String[] args) {
 		
@@ -61,6 +60,7 @@ public class DBManager {
 			String query = "insert into User value ('"+ name +"',' " + password + "',' " + email + "')";
 			
 			executeQuery(DBManager.connection(), query);
+			
 			PreparedStatement prepareStatement = DBManager.connection().prepareStatement("insert into User value (?,?,?)");
 
 			addUser(prepareStatement, "Rafa", "2455346", "Rafa@mail.com");
@@ -73,12 +73,12 @@ public class DBManager {
 		}
 	}
 
-	public static void addUser(PreparedStatement prepareStatement, String name, String password, String email) {
+	public static void addUser(PreparedStatement preparedStatement, String name, String password, String email) {
 		try {
-			prepareStatement.setString(1, name);
-			prepareStatement.setString(2, password);
-			prepareStatement.setString(3, email);
-			prepareStatement.execute();
+			preparedStatement.setString(1, name);
+			preparedStatement.setString(2, password);
+			preparedStatement.setString(3, email);
+			preparedStatement.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

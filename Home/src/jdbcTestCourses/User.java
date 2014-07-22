@@ -4,7 +4,7 @@ public class User { //	POJO - plain old java Object
 	//	java bean
 
 	/*
-	 * User.myVeryLongname
+	 * User.name
 	 * User.password
 	 * User.email
 	 */
