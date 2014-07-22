@@ -1,7 +1,9 @@
-package jdbcTestCourses;
+package test.jdbcTestCourses;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import jdbcTestCourses.Persister;
+import jdbcTestCourses.User;
 
 import org.junit.Test;
 

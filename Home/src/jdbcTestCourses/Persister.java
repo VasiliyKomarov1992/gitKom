@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Persister {
 
-	static List<String> tables;
+	public static List<String> tables;
 
 	public static boolean persist(Object object) {
 		boolean result = false;
