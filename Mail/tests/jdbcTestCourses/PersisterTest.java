@@ -1,9 +1,7 @@
-package test.jdbcTestCourses;
+package jdbcTestCourses;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import jdbcTestCourses.Persister;
-import jdbcTestCourses.User;
 
 import org.junit.Test;
 
@@ -16,5 +14,4 @@ public class PersisterTest {
 		assertTrue(Persister.tables.size() > 0);
 		assertEquals("User", Persister.tables.get(0));
 	}
-
 }
