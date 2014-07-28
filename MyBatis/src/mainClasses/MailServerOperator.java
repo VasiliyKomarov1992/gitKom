@@ -15,7 +15,7 @@ public class MailServerOperator {
 					+ "Type 2 to add new user to list" + "\n"
 					+ "Type 3 to view all users" + "\n"
 					+ "Type 4 to view all messages on server" + "\n"
-					+ "Type 5 to add 3 test users" + "/n"
+					+ "Type 5 to add 3 test users" + "\n"
 					+ "Type 6 to view all messages from one user");
 			System.out.println("Type 0 to exit.");
 			if (scanner.hasNextInt()) {
@@ -43,11 +43,11 @@ public class MailServerOperator {
 				case 6: {
 					showMessagesFromOneUser();
 				}
-				
-//				case 11: {
-//					viewKeyset();
-//					break;
-//				}
+
+				// case 11: {
+				// viewKeyset();
+				// break;
+				// }
 				case 0: {
 					return;
 				}
@@ -60,15 +60,13 @@ public class MailServerOperator {
 		}
 	}
 
-
 	private void showMessagesFromOneUser() {
 		Scanner sc = new Scanner(System.in);
 		String sendersAdress = "";
 
 		showAllUsers(true);
-		
-	}
 
+	}
 
 	private void viewAllMessages() {
 		server.showMessages();
@@ -97,10 +95,11 @@ public class MailServerOperator {
 					+ Integer.toString(server.showEmails().size()) + " users:");
 		}
 
+		//		, with name " + server.getUserName(usersEmail) + "; 
+		
 		for (String usersEmail : server.showEmails()) {
-			System.out.println("User #" + Integer.toString(i) + ", with name "
-					+ server.getUserName(usersEmail) + "; e-mail:" + usersEmail
-					+ ";");
+			System.out.println("User #" + Integer.toString(i) + "e-mail:"
+					+ usersEmail + ";");
 			i++;
 		}
 
@@ -155,10 +154,10 @@ public class MailServerOperator {
 		}
 	}
 
-//	private void viewKeyset() {
-//		int i = 0;
-//		for (String key : server.viewEmails()) {
-//			System.out.println("Key #" + Integer.toString(i) + " = " + key);
-//		}
-//	}
+	// private void viewKeyset() {
+	// int i = 0;
+	// for (String key : server.viewEmails()) {
+	// System.out.println("Key #" + Integer.toString(i) + " = " + key);
+	// }
+	// }
 }

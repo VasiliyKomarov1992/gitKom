@@ -35,7 +35,7 @@ public class Example {
 				// join = mapper.loadUserByNameAndPassword("John", "123");
 				// System.out.println(join);
 
-				// mapper.storeNewUser("zaal", "qwerty", "zaal@itcwin.com");
+				 mapper.storeNewUser("zaal", "qwerty", "zaal@itcwin.com");
 				
 				/* добавление записи(с engine MyISAM), если добавляем в бд с
 				 * engine InnoDB, то не сохраняются изменения. Надо добавлять по-другому. 	

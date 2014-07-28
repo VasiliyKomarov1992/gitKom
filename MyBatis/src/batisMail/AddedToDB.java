@@ -32,7 +32,7 @@ public class AddedToDB {
 					System.out.println(user);
 				}
 
-				 mapper.storeNewUser("zaal", "qwerty");
+				 mapper.storeNewUser("zaal", "qwerty", null);
 				
 				/* добавление записи(с engine MyISAM), если добавляем в бд с
 				 * engine InnoDB, то не сохраняются изменения. Надо добавлять по-другому. 	
