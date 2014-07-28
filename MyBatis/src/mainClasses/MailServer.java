@@ -53,7 +53,7 @@ public class MailServer {
 	public void showMessages() {
 		
 		for (Entry<ServerHashKey, Message> entry : messages.entrySet()) {
-		    System.out.println("Email: " + entry.getKey().recipientsAddress + " Text Messages: "
+		    System.out.println("Email: " + entry.getKey().toString() + " Text Messages: "
 		        + entry.getValue().messagesText);
 		}
 	}

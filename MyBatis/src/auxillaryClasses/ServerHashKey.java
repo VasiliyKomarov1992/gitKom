@@ -8,4 +8,10 @@ public class ServerHashKey {
 		this.sendersAddress = _sendersAdress;
 		this.recipientsAddress = _recipientsAdress;
 	}
+	
+	@Override
+	public String toString() {
+		return sendersAddress + recipientsAddress;
+	}
+	
 }
