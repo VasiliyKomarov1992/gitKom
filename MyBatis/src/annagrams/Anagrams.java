@@ -9,30 +9,30 @@ import java.util.Scanner;
 
 public class Anagrams {
 
-	File file = new File("/Users/student/Downloads/wordlist.txt");
+	File file = new File("C:/Users/Remy/Documents/wordlist.txt");
 	public static HashMap<String, ArrayList<String>> map = new HashMap<>();
 	Scanner scanner = new Scanner(System.in);
 	String word;
 
-	private void inputText() {
+	private void searchAnagram() {
 
 		System.out.println("Enter the words:");
 		word = scanner.nextLine();
 		
-		String sortedWord = sortString(word);
+		String sortedWord = sortingWords(word);
 		ArrayList<String> anagrams = map.get(sortedWord); //	this is key
 		
-		searchAnagram();
+		if (anagrams == null) {
+			anagrams = new ArrayList<>();
+		}
+		anagrams.add(word);
+		
 	}
 
-	private String sortString(String newSortedWord) {
+	private String sortingWords(String newSortedWord) {
 		char[] ch = newSortedWord.toCharArray();
 		Arrays.sort(ch);
 		return new String(ch);
-	}
-
-	private void searchAnagram() {
-
 	}
 
 	@Override
@@ -55,9 +55,9 @@ public class Anagrams {
 		// }
 		// }
 		Anagrams ann = new Anagrams();
-		ann.inputText();
-		System.out.println("Word: " + ann.toString() + "\n" + " Anagrams: "
-				+ anagrams);
+		ann.searchAnagram();
+//		System.out.println("Word: " + ann.toString() + "\n" + " Anagrams: "
+//				+ anagrams);
 
 	}
 }
