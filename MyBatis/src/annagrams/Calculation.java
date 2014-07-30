@@ -8,13 +8,10 @@ public class Calculation {
 
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Please, enter the number: ");
-		String txt = scanner.nextLine().trim();
-		char[] array = txt.toCharArray();
-		int sum = 0;
-		for (char c : array) {
-				sum = sum + Character.getNumericValue(c);
-		}
+		System.out.println("Введите двухзначное число: ");
+		int i = scanner.nextInt();
+		int sum = ((i - (i%10)) / 10) + (i%10); 
+		
 		System.out.println("sum = " + sum);
 	}
 }

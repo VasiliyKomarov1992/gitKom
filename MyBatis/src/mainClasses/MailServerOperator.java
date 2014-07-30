@@ -90,17 +90,17 @@ public class MailServerOperator {
 
 	private void showAllUsers(boolean justViewList) {
 		int i = 1;
-		if (!justViewList) {
-			System.out.println("There are "
-					+ Integer.toString(server.showEmails().size()) + " users:");
-		}
-
-		//		, with name " + server.getUserName(usersEmail) + "; 
-		
 		for (String usersEmail : server.showEmails()) {
 			System.out.println("User #" + Integer.toString(i) + "e-mail:"
 					+ usersEmail + ";");
 			i++;
+			// if (!justViewList) {
+			// System.out.println("There are "
+			// + Integer.toString(server.showEmails().size()) + " users:");
+			// }
+
+			// , with name " + server.getUserName(usersEmail) + ";
+
 		}
 
 	}

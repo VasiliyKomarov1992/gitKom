@@ -23,8 +23,8 @@ public class Anagrams {
 		while (scannerText.hasNextLine()) {
 			String word = scannerText.nextLine();
 
-			String sortedWord = sortingWords(word);
-			ArrayList<String> anagrams = map.get(sortedWord); // this is key
+			String sortedWord = sortingWords(word);			// key
+			ArrayList<String> anagrams = map.get(sortedWord); // value
 
 			if (anagrams == null) {
 				anagrams = new ArrayList<>();
