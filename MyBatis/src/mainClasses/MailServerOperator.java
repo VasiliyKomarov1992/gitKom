@@ -11,12 +11,12 @@ public class MailServerOperator {
 			Scanner scanner = new Scanner(System.in);
 
 			System.out.println("\n" + "Mail server menu:");
-			System.out.println("Type 1 to write new message;" + "\n"
-					+ "Type 2 to add new user to list" + "\n"
-					+ "Type 3 to view all users" + "\n"
-					+ "Type 4 to view all messages on server" + "\n"
-					+ "Type 5 to add 3 test users" + "\n"
-					+ "Type 6 to view all messages from one user");
+			System.out.println("Type 1 to write new message;");
+			System.out.println("Type 2 to add new user to list");
+			System.out.println("Type 3 to view all users");
+			System.out.println("Type 4 to view all messages on server");
+			System.out.println("Type 5 to add 3 test users");
+			System.out.println("Type 6 to view all messages from one user");
 			System.out.println("Type 0 to exit.");
 			if (scanner.hasNextInt()) {
 				switch (scanner.nextInt()) {

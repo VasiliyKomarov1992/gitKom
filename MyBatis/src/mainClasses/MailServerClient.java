@@ -32,14 +32,14 @@ public class MailServerClient {
 		newMessage.recipientsAddress = _recipientsAdress;
 
 		System.out.println(serviceInformation = "\n" + "\t"
-				+ "This is test message from user: " + this.email + "; to: "
+				+ "This is test message from user: " + email + "; to: "
 				+ newMessage.recipientsAddress + "." + "\n");
 
 		System.out.println("Write the text of message: " + "\n");
 		newMessage.messagesText = _scanner.nextLine() + "\n"
 				+ serviceInformation;
 
-		newMessage.sendersAddress = this.email;
+		newMessage.sendersAddress = email;
 
 		System.out
 				.println("-------------------------------Done.-----------------------------");

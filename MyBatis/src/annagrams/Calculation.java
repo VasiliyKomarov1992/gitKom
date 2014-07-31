@@ -8,7 +8,7 @@ public class Calculation {
 
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Введите двухзначное число: ");
+		System.out.println("Введите двузначное число: ");
 		int i = scanner.nextInt();
 		int sum = ((i - (i%10)) / 10) + (i%10); 
 		
