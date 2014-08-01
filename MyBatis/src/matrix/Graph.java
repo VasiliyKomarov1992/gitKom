@@ -8,11 +8,11 @@ public class Graph {
 	
 	int vertices;
 	int edge;
-	int[][] adjacent;
+	int[][] initialValue;
 	
-	int[][] matrix = new int[][] {
+	int[][] matrix = {
 			{4,2,2,5},
-			{5,7,3,1},
+			{5,2,3,1},
 			{4,2,6,5},
 			{8,1,3,7}
 	};
@@ -29,3 +29,5 @@ public class Graph {
 		}
 	}
 }
+//http://java-study.ru/java-uchebnik/96-mnogomernye-massivy
+//http://www.policyalmanac.org/games/aStarTutorial_rus.htm
