@@ -20,6 +20,11 @@ public class Graph {
 	public void searchBreadthFirst() {
 		Queue<Integer> queue = new LinkedList<>(); // заносим исходную вершину
 		while (!queue.isEmpty()) {
+			for (int i = 0; i < matrix.length; i++) {
+				for (int j = 0; j < matrix[i].length; j++) {
+					
+				}
+			}
 			int last = queue.poll();
 			for (int i = 0; i < matrix.length; i++) {
 				if(matrix[last][i] == 1) {
@@ -31,3 +36,4 @@ public class Graph {
 }
 //http://java-study.ru/java-uchebnik/96-mnogomernye-massivy
 //http://www.policyalmanac.org/games/aStarTutorial_rus.htm
+//http://java.dzone.com/articles/algorithm-week-graph-breadth
