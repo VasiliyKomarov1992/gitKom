@@ -10,7 +10,7 @@ public class BreadthFirstSearch {
 	ArrayList<Point> coordinates = new ArrayList<>();
 	Queue<Integer> queue = new LinkedList<>();
 	
-	boolean[] marked;
+	boolean[][] marked;
 	int[][] matrix = {
 			{ 4, 2, 2, 5 },
 			{ 5, 2, 3, 1 },
@@ -23,18 +23,21 @@ public class BreadthFirstSearch {
 		
 		int initialValue = matrix[row][column];
 		coordinates.add(new Point(row, column));
-		queue.add(initialValue);
-		marked[initialValue] = true;
-		parent[initialValue] = -1;
+		queue.add(row);
+		queue.add(column);
+		marked[row][column] = true;
 		
 		while (!queue.isEmpty()) {
 			int value = queue.poll();
-			for (int i = 0; i < matrix.length; ++i) {
-					if (matrix[value][i] == initialValue && !marked[i]) {
-						parent[i] = value;
-						marked[i] = true;
+			for (int i = 0; i < matrix.length; i++) {
+				for (int j = 0; j < matrix[j].length; j++) {
+					if (matrix[][] == coordinates && !marked[i][j]) {
+
+						marked[i][j] = true;
 						queue.add(i);
-						coordinates.add(new Point([][]));
+						queue.add(j);
+//						coordinates.add(new Point([][]));
+				}
 				}
 			}
 		}
