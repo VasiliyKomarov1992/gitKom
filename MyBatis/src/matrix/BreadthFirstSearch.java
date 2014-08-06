@@ -8,36 +8,24 @@ import java.util.Queue;
 public class BreadthFirstSearch {
 
 	ArrayList<Point> coordinates = new ArrayList<>();
-	Queue<Integer> queue = new LinkedList<>();
+	Queue<Point> queue = new LinkedList<>();
 	
 	boolean[][] marked;
-	int[][] matrix = {
-			{ 4, 2, 2, 5 },
-			{ 5, 2, 3, 1 },
-			{ 4, 2, 6, 2 },
-			{ 8, 1, 3, 2 }
-		};
-	int[] parent;
+	int[][] matrix;
 	
-	public void bfs(int row, int column) {
+	public void bfs(int[][] mat, int row, int column) {
+		matrix = mat;
+		int initialValue = mat[row][column];
 		
-		int initialValue = matrix[row][column];
-		coordinates.add(new Point(row, column));
-		queue.add(row);
-		queue.add(column);
-		marked[row][column] = true;
+		queue.add(new Point(row, column));
 		
 		while (!queue.isEmpty()) {
-			int value = queue.poll();
-			for (int i = 0; i < matrix.length; i++) {
-				for (int j = 0; j < matrix[j].length; j++) {
-					if (matrix[][] == coordinates && !marked[i][j]) {
-
-						marked[i][j] = true;
-						queue.add(i);
-						queue.add(j);
-//						coordinates.add(new Point([][]));
-				}
+			Point value = queue.poll();
+			coordinates.add(value);
+			marked[value.x][value.y] = true;
+			for (Point sosed : sosedi) {
+				if (matrix[sosed.x][sosed.y] == matrix[value.x][value.y]) {
+					queue.add(sosed);
 				}
 			}
 		}
