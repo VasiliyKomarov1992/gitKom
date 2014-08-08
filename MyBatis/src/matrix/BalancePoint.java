@@ -7,36 +7,38 @@ public class BalancePoint {
 	public static void main(String[] args) {
 
 		int[] array = { 1, 3, 4, 1, 2, 6, };
-		
+
 		System.out.println("Для массива: " + Arrays.toString(array));
 
 		for (int i = 0; i < array.length; i++) {
 			if (sum(array, i) == 1) {
-				System.out.println("Точка баланса в массиве находится под номером: " + i);
+				System.out
+						.println("Точка баланса: "
+								+ i);
 			} else {
 				System.out.println("Точка баланса не найдена.");
 			}
-			
+
 		}
 	}
 
- 	private static int sum(int[] a, int number) {
+	private static int sum(int[] a, int number) {
 
-		int result1 = 0;
-		int result2 = 0;
+		int sumLeft = 0;
+		int sumRight = 0;
 		int equal;
 
 		for (int i = 0; i < number; i++) {
-			result1 += a[i];
+			sumLeft += a[i];
 		}
-		System.out.println("result1 -> " + result1 + "\n");
+		System.out.println("result1 -> " + sumLeft + "\n");
 
-		for (int j = a.length + 1; j < a.length; j++) {
-			result2 += a[j];
-			System.out.println(result2);
+		for (int j = number - 1; j > number; j--) {
+			sumRight += a[j];
+			System.out.println(sumRight);
 		}
 
-		if (result1 == result2) {
+		if (sumLeft == sumRight) {
 			equal = 1;
 		} else {
 			equal = 0;

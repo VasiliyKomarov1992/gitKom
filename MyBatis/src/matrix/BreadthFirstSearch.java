@@ -12,7 +12,7 @@ public class BreadthFirstSearch {
 
 	boolean[][] marked = new boolean[4][6];
 	int[][] matrix = {
-			{ 4, 1, 5, 6, 7, 4 },
+			{ 4, 1, 5, 6, 4, 4 },
 			{ 1, 3, 3, 3, 4, 5 },
 			{ 4, 3, 5, 6, 7, 5 },
 			{ 3, 5, 6, 3, 4, 5 },
@@ -44,32 +44,36 @@ public class BreadthFirstSearch {
 		System.out.println("- - - - - - - - - ");
 	}
 
-	public void searchNeighbor(int row, int column, int pointStarting) {
+	public void searchNeighbor(int row, int column, int pointStarting) throws ArrayIndexOutOfBoundsException {
 
-		try {
+		if (row != matrix.length - 1) {
 			if (matrix[row + 1][column] == pointStarting) {
 				sosedi.add(new Point(row + 1, column));
 			}
+		}
+		if (row != 0) {
 			if (matrix[row - 1][column] == pointStarting) {
 				sosedi.add(new Point(row - 1, column));
 			}
+		}
+		if (column != matrix[row].length - 1) {
 			if (matrix[row][column + 1] == pointStarting) {
 				sosedi.add(new Point(row, column + 1));
 			}
-			if (matrix[row][column - 1] == pointStarting) {
+		}
+		if (column != 0) {
+			if (matrix[row][column - 1] == pointStarting && column != 0) {
 				sosedi.add(new Point(row, column - 1));
 			}
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("arrayIndexOutOfBoundsException");
-			if(row == matrix.length - 1 && column == matrix[row].length - 1) {
-	            // что-то делаем ещё
-	 }
 		}
 	}
+
 	public static void main(String[] args) {
 
 		BreadthFirstSearch b = new BreadthFirstSearch();
 		b.bfs(2, 1);
+		b.bfs(1, 0);
+		b.bfs(0, 5);
 		b.bfs(3, 5);
 	}
 }
