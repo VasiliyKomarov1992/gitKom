@@ -19,11 +19,10 @@ public class BalancePointExampleTwo {
 				sumRight += array[--indexRight];
 				System.out.println("sumright: " + sumRight);
 			}
-
-			if (sumLeft == sumRight && indexLeft == indexRight) {
-				System.out.println("Точка баланса в координате:" + indexLeft
-						+ ", " + indexRight + "\n" + "Сумма равна: " + " левая: " + sumLeft + ", правая: " + sumRight);
-			}
+		}
+		if (sumLeft == sumRight) {
+			System.out.println("Точка баланса в координате:" + indexLeft
+					+ ", " + indexRight + "\n" + "Сумма равна: " + " левая: " + sumLeft + ", правая: " + sumRight);
 		}
 	}
 
