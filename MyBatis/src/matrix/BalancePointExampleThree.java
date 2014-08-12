@@ -2,7 +2,7 @@ package matrix;
 
 import java.util.Arrays;
 
-public class ExampleBalance {
+public class BalancePointExampleThree {
 
 	int[] array = { 1, 3, 4, 1, 2, 6, };
 
@@ -29,7 +29,7 @@ public class ExampleBalance {
 
 	public static void main(String[] args) {
 
-		ExampleBalance ex = new ExampleBalance();
+		BalancePointExampleThree ex = new BalancePointExampleThree();
 		System.out.println(ex.balanceSearch());
 
 	}
