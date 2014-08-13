@@ -7,25 +7,31 @@ import java.util.Scanner;
 public class CountCodeLines {
 
 	File file = new File("/Users/student/Documents/CodeKata/13/textSmall");
-	// FileInputStream fileInput = new FileInputStream(file.);
-	int count = 0;
-	String textLine;
 	Scanner scannerText;
+	String textLine;
+	int count = 0;
 
 	public void countingLines() {
-
 		try {
 			scannerText = new Scanner(file);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-
 		while (scannerText.hasNextLine()) {
 			textLine = scannerText.nextLine();
-				
+			char[] ch = textLine.toCharArray();
+			for (int i = 0; i < ch.length; i++) {
+				if (ch[i] != '*') {
+					System.out.println(ch[i]);
+					count++;
+				}
+			}
 			
 			System.out.println(textLine);
 		}
+		
+		System.out.println(count);
+		
 	}
 
 	public static void main(String[] args) {
@@ -35,5 +41,4 @@ public class CountCodeLines {
 	}
 }
 
-//			char[] ch = textLine.toCharArray();
 //			count++
