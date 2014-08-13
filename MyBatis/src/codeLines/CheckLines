@@ -1,0 +1,17 @@
+1. Использовать регулярные выражения.
+http://javatalks.ru/topics/39092
+http://www.exlab.net/files/tools/sheets/regexp/regexp.pdf
+
+2. Разбить на символы строку. (toCharArray)
+http://docs.oracle.com/javase/tutorial/i18n/text/charintro.html
+http://easy-code.ru/lesson/manipulating-characters-string-java
+
+3. String.split(); - опять же регулярные выражения.
+
+
+4. StringTokenizer - есть метод проверки на наличие слов, после элемента. Следовательно если после комментария нет элементов, то не засчитывать. Разбиение строки на слова.
+(http://articles.org.ru/docum/java/gl5/gl5.php#6)
+
+5. Scanner.useDelimiter() - разделетиель, правда хз как применять.
+
+6. String.indexOf(); - сравнивает символ 
