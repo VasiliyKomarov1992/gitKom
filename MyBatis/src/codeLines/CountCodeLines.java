@@ -6,11 +6,10 @@ import java.util.Scanner;
 
 public class CountCodeLines {
 
-	File file = new File("/Users/student/Documents/CodeKata/13/textSmall");
+	File file = new File("/Users/student/Documents/CodeKata/13/textBig");
 	Scanner scannerText;
 	String textLine;
 	int count = 0;
-	char[] ch;
 
 	public void countingLines() {
 		try {
