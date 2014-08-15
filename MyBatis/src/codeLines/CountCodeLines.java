@@ -19,8 +19,7 @@ public class CountCodeLines {
 			e.printStackTrace();
 		}
 		while (scannerText.hasNextLine()) {
-			textLine = scannerText.nextLine();
-			textLine = textLine.trim();
+			textLine = scannerText.nextLine().trim();
 			boolean comment = textLine.startsWith("/*")
 					|| textLine.startsWith("//") || textLine.endsWith("*/")
 					|| textLine.startsWith("*") || textLine.isEmpty();
