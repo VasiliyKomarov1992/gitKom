@@ -10,6 +10,7 @@ public class CountCodeLines {
 	Scanner scannerText;
 	String textLine;
 	int count = 0;
+	char[] ch;
 
 	public void countingLines() {
 		try {
@@ -19,19 +20,16 @@ public class CountCodeLines {
 		}
 		while (scannerText.hasNextLine()) {
 			textLine = scannerText.nextLine();
-			char[] ch = textLine.toCharArray();
-			for (int i = 0; i < ch.length; i++) {
-				if (ch[i] != '*') {
-					System.out.println(ch[i]);
-					count++;
-				}
+			textLine = textLine.trim();
+			boolean comment = textLine.startsWith("/*")
+					|| textLine.startsWith("//") || textLine.endsWith("*/")
+					|| textLine.startsWith("*") || textLine.isEmpty();
+			if (!comment) {
+				count++;
+				System.out.println(textLine);
 			}
-			
-			System.out.println(textLine);
 		}
-		
 		System.out.println(count);
-		
 	}
 
 	public static void main(String[] args) {
@@ -40,5 +38,3 @@ public class CountCodeLines {
 		lines.countingLines();
 	}
 }
-
-//			count++

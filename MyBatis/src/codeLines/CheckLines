@@ -14,4 +14,19 @@ http://easy-code.ru/lesson/manipulating-characters-string-java
 
 5. Scanner.useDelimiter() - разделетиель, правда хз как применять.
 
-6. String.indexOf(); - сравнивает символ 
+6. String.indexOf(); - ищет символ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://github.com/chrislongo/CodeKata/blob/master/13-cloc/src/main/java/LineCounter.java
