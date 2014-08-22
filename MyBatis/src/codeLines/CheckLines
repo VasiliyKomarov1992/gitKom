@@ -6,7 +6,7 @@ http://www.exlab.net/files/tools/sheets/regexp/regexp.pdf
 http://docs.oracle.com/javase/tutorial/i18n/text/charintro.html
 http://easy-code.ru/lesson/manipulating-characters-string-java
 
-3. String.split(); - опять же регулярные выражения.
+3. String.split();
 
 
 4. StringTokenizer - есть метод проверки на наличие слов, после элемента. Следовательно если после комментария нет элементов, то не засчитывать. Разбиение строки на слова.
@@ -19,7 +19,8 @@ http://easy-code.ru/lesson/manipulating-characters-string-java
 
 
 
-
+/* another comment */ System./*wait*/out./*for*/println/*it*/("Hello/*");  /* another
+если /* в начале, то помечаем ее и ищем в строке */, если в конце строки она закрывающая, то не считаем. А если она есть в строке, но она не последняя (!no), то считаем строчку
 
 
 

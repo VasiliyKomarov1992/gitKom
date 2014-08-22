@@ -3,18 +3,14 @@ package codeLines;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class CountCodeLines {
 
 	File file = new File("/Users/student/Documents/CodeKata/13/textBig");
 	Scanner scannerText;
 	String textLine;
-	StringTokenizer token;
 	int count = 0;
-	char[] ch;
-	String string = "*/";
-	
+
 	public void countingLines() {
 		try {
 			scannerText = new Scanner(file);
@@ -23,18 +19,22 @@ public class CountCodeLines {
 		}
 		while (scannerText.hasNextLine()) {
 			textLine = scannerText.nextLine().trim();
-//			token = new StringTokenizer(textLine, "");
-//			token.;
-			boolean comment = 
-					 textLine.startsWith("//") 
-//					 textLine.startsWith("/*"); 
-//					|| textLine.endsWith("*/") 
+
+			// for (String str : textLine.split("/*")) {
+			// System.out.println(str);
+			// }
+
+			boolean comment = textLine.startsWith("//")
 					|| textLine.startsWith("*") || textLine.isEmpty();
-			ch = textLine.toCharArray();
-			
-			if (!comment){
-				count++;
+
+			boolean str = textLine.startsWith("/*")
+					&& textLine.indexOf("*/") != -1 && !textLine.endsWith("*/");
+			boolean str1 = textLine.startsWith("/*")
+					&& textLine.indexOf("*/") == -1;
+
+			if (!comment || str) {
 				System.out.println(textLine);
+				count++;
 			}
 		}
 		System.out.println(count);
