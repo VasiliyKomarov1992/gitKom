@@ -24,15 +24,18 @@ public class CountCodeLines {
 			// System.out.println(str);
 			// }
 
-			boolean comment = textLine.startsWith("//")
+			boolean startWithComment = textLine.startsWith("//")
 					|| textLine.startsWith("*") || textLine.isEmpty();
 
-			boolean str = textLine.startsWith("/*")
-					&& textLine.indexOf("*/") != -1 && !textLine.endsWith("*/");
+			// boolean borderInTheCommentLine = textLine.startsWith("/*")
+			// && textLine.indexOf("*/") != -1 && !textLine.endsWith("*/");
+			//
 			boolean str1 = textLine.startsWith("/*")
-					&& textLine.indexOf("*/") == -1;
+					&& textLine.cod
+					
+//					textLine.indexOf("*/") != -1;
 
-			if (!comment || str) {
+			if (!startWithComment || str1) {
 				System.out.println(textLine);
 				count++;
 			}
