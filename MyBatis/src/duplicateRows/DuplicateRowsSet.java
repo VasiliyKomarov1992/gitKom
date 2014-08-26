@@ -12,9 +12,16 @@ public class DuplicateRowsSet {
 		System.out.println(set);
 	}
 
-	public void deleteDuplicateLines() {
-		
-	}
+	public void deleteLines(List<String> _list) {
+		List newList = new ArrayList<>();
+		for (int i = 0; i < _list.; i++) {
+			
+		}
+			if (!newList.contains()) {
+				newList.add(_list);
+				System.out.println(newList);
+			}
+		}
 	
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<>();
@@ -30,6 +37,7 @@ public class DuplicateRowsSet {
 		list.add("dobryi den");
 		list.add("privaet");
 		
-		rows.deleteDuplicateRowsSet(list);
+//		rows.deleteDuplicateRowsSet(list);
+		rows.deleteLines(list);
 	}
 }
